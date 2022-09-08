@@ -83,12 +83,16 @@ const DB = [
 
 function App() {
   const [CB, setCB] = useState("");
+  const [TG, setTG] = useState(false);
 
   return (
     <>
       <h1 className={CB ? "on" : ""} onClick={() => setCB("ON")}>
         LOGO
       </h1>
+      <h2 className={`ggg ${TG ? "on" : ""}`}>toggle class</h2>
+      <button onClick={() => setTG(!TG)}>class 토글</button>
+      {/* <button onClick={() => setTEXT(!TEXT)}>글자겹치는 거 나오는 버튼</button> */}
       <nav className="GNB">
         {/* <h1>{DB[0].name}</h1> */}
         {/* {DB[0].name}
