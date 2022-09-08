@@ -1,6 +1,7 @@
 //const DB1 = [{ name: "kim" }, { name: "mi_suuun" }, { name: "suuun" }];
 
 import { useState } from "react";
+import MainSlider from "./component/MainSlider";
 
 const DB = [
   {
@@ -86,43 +87,50 @@ function App() {
   const [TG, setTG] = useState(false);
 
   return (
-    <>
-      <h1 className={CB ? "on" : ""} onClick={() => setCB("ON")}>
-        LOGO
-      </h1>
-      <h2 className={`ggg ${TG ? "on" : ""}`}>toggle class</h2>
-      <button onClick={() => setTG(!TG)}>class 토글</button>
-      {/* <button onClick={() => setTEXT(!TEXT)}>글자겹치는 거 나오는 버튼</button> */}
-      <nav className="GNB">
-        {/* <h1>{DB[0].name}</h1> */}
-        {/* {DB[0].name}
-        {DB[1].name}
-        {DB[2].name} */}
-        {/* <ul>
-          {DB1.map((el, idx) => (
-            <li key={idx}>{el.name}</li>
-          ))}
-        </ul> */}
-        <ul>
-          {DB.map((el, idx) => (
-            <li key={idx}>
-              <a href={el.link}>{el.content}</a>
-              <ul className="submenu">
-                {el.submenu.map((submenu, idx) => (
-                  <li key={idx}>
-                    <a href={submenu.link}>{submenu.content}</a>
-                  </li>
-                ))}
-                {/* <li>
-                  <a href="">{el.sunmenu[0].content}</a>
-                </li> */}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </>
+    <div className="Wrap">
+      <header>
+        <h1 className={CB ? "on" : ""} onClick={() => setCB("ON")}>
+          LOGO
+        </h1>
+        <h2 className={`ggg ${TG ? "on" : ""}`}>toggle class</h2>
+        <button onClick={() => setTG(!TG)}>class 토글</button>
+        {/* <button onClick={() => setTEXT(!TEXT)}>글자겹치는 거 나오는 버튼</button> */}
+        <nav className="GNB">
+          {/* <h1>{DB[0].name}</h1> */}
+          {/* {DB[0].name}
+          {DB[1].name}
+          {DB[2].name} */}
+          {/* <ul>
+            {DB1.map((el, idx) => (
+              <li key={idx}>{el.name}</li>
+            ))}
+          </ul> */}
+          <ul>
+            {DB.map((el, idx) => (
+              <li key={idx}>
+                <a href={el.link}>{el.content}</a>
+                <ul className="submenu">
+                  {el.submenu.map((submenu, idx) => (
+                    <li key={idx}>
+                      <a href={submenu.link}>{submenu.content}</a>
+                    </li>
+                  ))}
+                  {/* <li>
+                    <a href="">{el.sunmenu[0].content}</a>
+                  </li> */}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <MainSlider />
+      </main>
+    </div>
   );
 }
 
 export default App;
+
+//https://intrepidgeeks.com/tutorial/everything-deployed-by-gh-pages
