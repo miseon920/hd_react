@@ -53,6 +53,14 @@ header {
 } */
 
 /*slider*/
+/* 슬릭슬라이드 깜박임 해결 : 브라우즈 업그레이드와 관련있는 이슈였음
+... reset으로 옮길 예정 
+cloned 가 생성 되는 시간보다 변하는 시간이 길어서 ... 가 원인... */
+
+.slick-track,
+.slick-list {
+  transition-delay: 30ms;
+}
 .MainVisual {
   position: relative;
   transition: 0.5s;
