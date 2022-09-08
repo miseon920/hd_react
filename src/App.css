@@ -59,7 +59,8 @@ cloned 가 생성 되는 시간보다 변하는 시간이 길어서 ... 가 원�
 
 .slick-track,
 .slick-list {
-  transition-delay: 30ms;
+  transition-duration: 0.5s;
+  /* transition-delay: 30ms; */
 }
 .MainVisual {
   position: relative;
